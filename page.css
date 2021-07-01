@@ -1,0 +1,121 @@
+/* 
+
+// some css 
+// make it as you want
+// but to define the results maybe you will need to give them a class in js file
+// or do as i did
+// to select the input you say
+// .searchinput{
+//  your code goes here...
+// }
+// to select the whole container for results you say
+// .printres{
+//      your code here...
+// }
+
+
+// to select only the container for every result wich what we put an <a> element you say 
+// .printres a {
+//     your code here...
+// }
+
+// to select the img in every result you say 
+// .printres a img {
+//     your code goes here...
+// }
+
+// to select the name of the movie you say 
+// .printres a p{
+//     your code goes here...
+// }
+
+// : !quick note: this only will work if you didnt change it in js file
+
+... good night with some styles
+*/
+
+
+/* basics */
+*,*::before,*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-decoration: none;
+    color:#000;
+    font-size: 100%;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background: rgb(180, 180, 180);
+    color: black;
+}
+
+
+/* the container */
+.container{
+    height: 100vh;
+    display:  grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12 , 1fr);
+}
+
+
+/* the search input */
+.searchinput{
+    font-size: 20px;
+    border: none;
+    padding: 1vw;
+    transition: all 0.4s ease-out;
+    grid-column: 5 / 9;
+    grid-row: 3 / 4;
+}
+
+.searchinput:focus-visible {
+    outline-offset: none;
+    outline: none;
+    box-shadow: 0px 0px 20px 5px #fffb00;
+    border-radius: 10px;
+}
+
+
+
+
+/* the results whole container */
+.printres{
+    grid-row: 4 / 10 ;
+    grid-column: 5 / 9;
+    text-align: center;
+    background-color: #585757b4;
+    scroll-behavior: smooth;
+    overflow-y: auto;
+    overflow-x: hidden;
+    color: white;
+}
+
+
+/* the container for every result   */
+.printres a {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: 10px solid ;
+    border-top: 10px solid ;
+}
+
+
+/* the name of the movie in the result  */
+.printres a p{
+    margin-left:3%;
+    font-size: 2rem;
+} 
+
+/* the img of the movie  */
+.printres a img{
+    width: 20%;
+    height: 10vh;
+}
