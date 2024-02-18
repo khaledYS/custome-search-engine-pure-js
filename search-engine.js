@@ -46,7 +46,8 @@ var moviesData ;
 // and replace it with this code after taking out the comments triggers
 
 
-/* moviesData = `{
+// comment the next object if you already have json-based file of movies name.
+moviesData = `{
     "ALAA ALDEEN" : ["https://picsum.photos/0", "Alaa Aldeen", ""],
     "DEADPOOL 2" : ["https://picsum.photos/1", "Deadpool 2", ""],
     "DETECTIVE CONAN 1" : ["https://picsum.photos/2", "Detective Conan 1", ""],
@@ -58,7 +59,7 @@ var moviesData ;
     "RUN" : ["https://picsum.photos/9", "Run", ""],
     "THE MITCHELLS VS. THE MACHINES" : ["https://picsum.photos/10", "The Mitchells vs. the Machines", ""]
 }`;
-moviesData = JSON.parse(moviesData); */
+moviesData = JSON.parse(moviesData); 
 
 
 
